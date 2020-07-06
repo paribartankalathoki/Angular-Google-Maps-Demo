@@ -4,13 +4,19 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import {AgmCoreModule} from '@agm/core';
+
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'ENTER_API_KEY_PROVIDED_BY_GOOGLE_DEVELOPER',
+      libraries: ['places']
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
